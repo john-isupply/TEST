@@ -1,0 +1,594 @@
+{
+  "settings": {
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "ar",
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "ar": {
+        "settings": {
+          "locale": "ar",
+          "trainByDomain": false,
+          "tag": "domain-manager-ar",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "password": {
+            "intent": "answer.undefined.ar.password",
+            "domain": "default"
+          },
+          "test5": {
+            "intent": "answer.undefined.ar.test5",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "answer.zad pharma.ar.password": "default",
+          "answer.gendy pharma.ar.password": "default",
+          "answer.hadayk pharma.ar.password": "default",
+          "answer.sayadla.ar.password": "default",
+          "answer.undefined.ar.PASSWORD": "default",
+          "answer.undefined.ar.password": "default",
+          "answer.undefined.ar.test5": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.zad pharma.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.gendy pharma.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.hadayk pharma.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.sayadla.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "PASSWORD",
+            "intent": "answer.undefined.ar.PASSWORD"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.undefined.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.undefined.ar.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "test5",
+            "intent": "answer.undefined.ar.test5"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "ar",
+              "tag": "nlu-ar",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "password": 1,
+              "test5": 1
+            },
+            "intents": {
+              "answer.zad pharma.ar.password": 1,
+              "answer.gendy pharma.ar.password": 1,
+              "answer.hadayk pharma.ar.password": 1,
+              "answer.sayadla.ar.password": 1,
+              "answer.undefined.ar.PASSWORD": 1,
+              "answer.undefined.ar.password": 1,
+              "answer.undefined.ar.test5": 1
+            },
+            "intentFeatures": {
+              "answer.zad pharma.ar.password": {
+                "password": 1
+              },
+              "answer.gendy pharma.ar.password": {
+                "password": 1
+              },
+              "answer.hadayk pharma.ar.password": {
+                "password": 1
+              },
+              "answer.sayadla.ar.password": {
+                "password": 1
+              },
+              "answer.undefined.ar.PASSWORD": {
+                "password": 1
+              },
+              "answer.undefined.ar.password": {
+                "password": 1
+              },
+              "answer.undefined.ar.test5": {
+                "test5": 1
+              }
+            },
+            "featuresToIntent": {
+              "password": [
+                "answer.zad pharma.ar.password",
+                "answer.gendy pharma.ar.password",
+                "answer.hadayk pharma.ar.password",
+                "answer.sayadla.ar.password",
+                "answer.undefined.ar.PASSWORD",
+                "answer.undefined.ar.password"
+              ],
+              "test5": [
+                "answer.undefined.ar.test5"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "ar",
+                "tag": "nlu-ar",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "password",
+                "test5"
+              ],
+              "intents": [
+                "answer.zad pharma.ar.password",
+                "answer.gendy pharma.ar.password",
+                "answer.hadayk pharma.ar.password",
+                "answer.sayadla.ar.password",
+                "answer.undefined.ar.PASSWORD",
+                "answer.undefined.ar.password",
+                "answer.undefined.ar.test5"
+              ],
+              "perceptrons": [
+                [
+                  1.4045965671539307,
+                  -0.4520076811313629,
+                  0.4526705368026686
+                ],
+                [
+                  1.458019495010376,
+                  -0.47040799260139465,
+                  0.4708730917540602
+                ],
+                [
+                  1.510298728942871,
+                  -0.48949170112609863,
+                  0.4897431453388717
+                ],
+                [
+                  1.5582517385482788,
+                  -0.5092238187789917,
+                  0.5092474888513311
+                ],
+                [
+                  1.6085922718048096,
+                  -0.5684993863105774,
+                  0.5162881987180735
+                ],
+                [
+                  3.2663278579711914,
+                  -1.357197880744934,
+                  1.0407267560892899
+                ],
+                [
+                  -3.5714218616485596,
+                  10.714286804199219,
+                  3.5714225957943895
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "password": {
+            "intent": "answer.undefined.en.password",
+            "domain": "default"
+          },
+          "test5": {
+            "intent": "answer.undefined.en.test5",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "answer.zad pharma.en.password": "default",
+          "answer.gendy pharma.en.password": "default",
+          "answer.hadayk pharma.en.password": "default",
+          "answer.sayadla.en.password": "default",
+          "answer.undefined.en.PASSWORD": "default",
+          "answer.undefined.en.password": "default",
+          "answer.undefined.en.test5": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.zad pharma.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.gendy pharma.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.hadayk pharma.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.sayadla.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "PASSWORD",
+            "intent": "answer.undefined.en.PASSWORD"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.undefined.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "password",
+            "intent": "answer.undefined.en.password"
+          },
+          {
+            "domain": "default",
+            "utterance": "test5",
+            "intent": "answer.undefined.en.test5"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "password": 1,
+              "test5": 1
+            },
+            "intents": {
+              "answer.zad pharma.en.password": 1,
+              "answer.gendy pharma.en.password": 1,
+              "answer.hadayk pharma.en.password": 1,
+              "answer.sayadla.en.password": 1,
+              "answer.undefined.en.PASSWORD": 1,
+              "answer.undefined.en.password": 1,
+              "answer.undefined.en.test5": 1
+            },
+            "intentFeatures": {
+              "answer.zad pharma.en.password": {
+                "password": 1
+              },
+              "answer.gendy pharma.en.password": {
+                "password": 1
+              },
+              "answer.hadayk pharma.en.password": {
+                "password": 1
+              },
+              "answer.sayadla.en.password": {
+                "password": 1
+              },
+              "answer.undefined.en.PASSWORD": {
+                "password": 1
+              },
+              "answer.undefined.en.password": {
+                "password": 1
+              },
+              "answer.undefined.en.test5": {
+                "test5": 1
+              }
+            },
+            "featuresToIntent": {
+              "password": [
+                "answer.zad pharma.en.password",
+                "answer.gendy pharma.en.password",
+                "answer.hadayk pharma.en.password",
+                "answer.sayadla.en.password",
+                "answer.undefined.en.PASSWORD",
+                "answer.undefined.en.password"
+              ],
+              "test5": [
+                "answer.undefined.en.test5"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "password",
+                "test5"
+              ],
+              "intents": [
+                "answer.zad pharma.en.password",
+                "answer.gendy pharma.en.password",
+                "answer.hadayk pharma.en.password",
+                "answer.sayadla.en.password",
+                "answer.undefined.en.PASSWORD",
+                "answer.undefined.en.password",
+                "answer.undefined.en.test5"
+              ],
+              "perceptrons": [
+                [
+                  1.4045965671539307,
+                  -0.4520076811313629,
+                  0.4526705368026686
+                ],
+                [
+                  1.458019495010376,
+                  -0.47040799260139465,
+                  0.4708730917540602
+                ],
+                [
+                  1.510298728942871,
+                  -0.48949170112609863,
+                  0.4897431453388717
+                ],
+                [
+                  1.5582517385482788,
+                  -0.5092238187789917,
+                  0.5092474888513311
+                ],
+                [
+                  1.6085922718048096,
+                  -0.5684993863105774,
+                  0.5162881987180735
+                ],
+                [
+                  3.2663278579711914,
+                  -1.357197880744934,
+                  1.0407267560892899
+                ],
+                [
+                  -3.5714218616485596,
+                  10.714286804199219,
+                  3.5714225957943895
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "PASSWORD"
+      ],
+      [
+        "en",
+        "PASSWORD"
+      ],
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "password"
+      ],
+      [
+        "en",
+        "password"
+      ],
+      [
+        "ar",
+        "test5"
+      ],
+      [
+        "en",
+        "test5"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "ar": {
+        "answer.zad pharma.ar.password": [
+          {
+            "answer": 1235
+          }
+        ],
+        "answer.gendy pharma.ar.password": [
+          {
+            "answer": 123
+          }
+        ],
+        "answer.hadayk pharma.ar.password": [
+          {
+            "answer": 55555
+          }
+        ],
+        "answer.sayadla.ar.password": [
+          {
+            "answer": 258
+          }
+        ],
+        "answer.undefined.ar.PASSWORD": [
+          {
+            "answer": "258"
+          }
+        ],
+        "answer.undefined.ar.password": [
+          {
+            "answer": "258"
+          }
+        ],
+        "answer.undefined.ar.test5": [
+          {
+            "answer": "test5-1"
+          }
+        ]
+      },
+      "en": {
+        "answer.zad pharma.en.password": [
+          {
+            "answer": 1235
+          }
+        ],
+        "answer.gendy pharma.en.password": [
+          {
+            "answer": 123
+          }
+        ],
+        "answer.hadayk pharma.en.password": [
+          {
+            "answer": 55555
+          }
+        ],
+        "answer.sayadla.en.password": [
+          {
+            "answer": 258
+          }
+        ],
+        "answer.undefined.en.PASSWORD": [
+          {
+            "answer": "258"
+          }
+        ],
+        "answer.undefined.en.password": [
+          {
+            "answer": "258"
+          }
+        ],
+        "answer.undefined.en.test5": [
+          {
+            "answer": "test5-1"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/john.css') }}">
+</head>
+<body>
+    <div class="admin-john-container">
+        <h1>CONTROL</h1>
+        <div class="admin-buttons">
+            <button id="addUserButton">إضافة مستخدم</button>
+            <button id="editUserButton">تعديل مستخدم</button>
+            <button id="permissionsButton">إعدادات الصلاحيات</button>
+        </div>
+        <div id="addUserContainer" class="form-container" style="display:none;">
+            <h3>إضافة مستخدم جديد</h3>
+            <form id="addUserForm">
+                <label for="username">اسم المستخدم:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">الدور:</label>
+                <select id="role" name="role">
+                    <option value="user">مستخدم</option>
+                    <option value="admin">مدير</option>
+                </select>
+
+                <button type="submit">إضافة</button>
+            </form>
+        </div>
+        <div id="editUserContainer" class="form-container" style="display:none;">
+            <h3>تعديل مستخدم</h3>
+            <!-- محتوى تعديل المستخدم -->
+        </div>
+        <div id="permissionsContainer" class="form-container" style="display:none;">
+            <h3>إعدادات الصلاحيات</h3>
+            <!-- محتوى إعدادات الصلاحيات -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/control.js') }}"></script>
+</body>
+</html>

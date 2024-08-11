@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard-header">
+        لوحة التحكم
+    </div>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="{{ url_for('whatsapp') }}">WhatsApp</a></li>
+                <li><a href="{{ url_for('ask_supply_assistant') }}">Ask i'Supply Assistant</a></li>
+                <li><a href="{{ url_for('control') }}">CONTROL</a></li>
+                <li><a href="{{ url_for('logout') }}">تسجيل الخروج</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>مرحبًا بك في لوحة التحكم</h2>
+            <p>هذه هي الصفحة الرئيسية للوحة التحكم حيث يمكنك الوصول إلى التطبيقات المختلفة وإدارة إعداداتك.</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

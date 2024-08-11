@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/john.css') }}">
+</head>
+<body>
+    <div class="admin-john-container">
+        <h1>صفحة الإدارة لجون</h1>
+        <div class="admin-buttons">
+            <button id="addQuestionButton">إضافة سؤال</button>
+            <button id="viewQuestionsButton">عرض الأسئلة</button>
+        </div>
+        <div id="addFormContainer" class="form-container">
+            <h3>إضافة سؤال</h3>
+            <form id="addForm">
+                <label for="question">السؤال:</label>
+                <textarea id="question" name="question" rows="3"></textarea>
+                <label for="answer">الإجابة:</label>
+                <textarea id="answer" name="answer" rows="3"></textarea>
+                <button type="submit">إضافة</button>
+            </form>
+        </div>
+        <div id="questionsListContainer" class="questions-list-container">
+            <h3>عرض الأسئلة</h3>
+            <div id="questionsContainer" class="questions-container"></div>
+        </div>
+    </div>
+</body>
+</html>

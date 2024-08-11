@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask John</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ask_john.css') }}">
+</head>
+<body>
+    <div class="ask-john-container">
+        <h2>اسأل جون</h2>
+        <form>
+            <textarea name="question" placeholder="اكتب سؤالك هنا..." rows="4" required></textarea>
+            <button type="submit">إرسال السؤال</button>
+        </form>
+    </div>
+</body>
+</html>
